@@ -6,8 +6,6 @@ Landing page de um estúdio de tatuagem, feita com **HTML e CSS puros**. Apresen
 
 🔗 **Ver online:** https://felipecsantos-dev.github.io/SamuelSanguinete/
 
-![Prévia da página](imagens/preview.png)
-
 ## Seções
 
 Hero · Sobre · Destaque do mês · Portfólio · Como funciona · Dúvidas frequentes · Agendamento · Rodapé
