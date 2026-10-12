@@ -4,7 +4,7 @@ Landing page de um estúdio de tatuagem, feita com **HTML e CSS puros**. Apresen
 
 > **Projeto de estudo**, sem fins comerciais e sem vínculo com o profissional ou o estúdio citados. Textos, imagens e contatos são apenas demonstrativos.
 
-🔗 **Ver online:** https://felipecsantos-dev.github.io/SamuelSanguinete/
+🔗 **Ver online:** https://felipecsantos-dev.github.io/estudiotatuagem/
 
 ## Seções
 
