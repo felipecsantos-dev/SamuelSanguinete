@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#0c0b0a" />
 
     <title>Estúdio Tatuagem — Aurora do Vale, MG</title>
-    <meta name="description" content="Estúdio de tatuagem em Aurora do Vale-MG. Criações feitas à mão e no digital para garantir que sua tattoo seja única, exclusiva e feita sob medida para você!" />
+    <meta name="description" content="Estúdio de tatuagem em Aurora do Vale-MG. Realismo, oriental e projetos autorais, em preto e cinza ou com cor, desenhados sob medida para você." />
     <meta property="og:title" content="Estúdio Tatuagem — Aurora do Vale, MG" />
-    <meta property="og:description" content="Estúdio de tatuagem em Aurora do Vale-MG. Criações feitas à mão e no digital para garantir que sua tattoo seja única, exclusiva e feita sob medida para você." />
+    <meta property="og:description" content="Realismo, oriental e projetos autorais, em preto e cinza ou com cor, desenhados sob medida para você." />
     <meta property="og:image" content="imagens/og-image.png" />
-    <meta property="og:url" content="https://felipecsantos-dev.github.io/estudiotatuagem/" />
+    <meta property="og:url" content="https://estudiotatuagem-eight.vercel.app/" />
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" />
+    <link rel="stylesheet" href="style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="script.js" defer></script>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -27,317 +35,391 @@
           "postalCode": "00000-000",
           "addressCountry": "BR"
         },
-        "priceRange": "$",
-        "openingHours": "Mo-Su 08:00-18:00",
+        "priceRange": "$$",
+        "openingHours": "Tu-Sa 09:00-19:00",
         "paymentAccepted": "Cash, Credit Card, Pix"
       }
     </script>
   </head>
   <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
     <!-- CABEÇALHO -->
-    <header>
-      <nav class="navbar container">
-        <a class="logo" href="#hero">estúdio <span class="logo-span">tatuagem</span></a>
+    <header class="cabecalho">
+      <nav class="ilha" aria-label="Principal">
+        <a class="logo" href="#hero">Estúdio <em>Tatuagem</em></a>
         <ul class="lista-nav">
-          <li><a href="#sobre">sobre</a></li>
-          <li><a href="#portfolio">portfólio</a></li>
-          <li><a href="#duvidas">dúvidas</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
         </ul>
-        <a class="btn-nav" href="#orcamento">orçamento</a>
+        <a class="btn btn-claro btn-nav" href="#orcamento">
+          Orçamento
+          <span class="btn-icone" aria-hidden="true">↗</span>
+        </a>
+        <button class="hamburguer" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
       </nav>
     </header>
-    <main>
+
+    <!-- MENU MOBILE -->
+    <div class="menu-mobile" id="menu-mobile" hidden>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#orcamento">Orçamento</a></li>
+      </ul>
+      <p>Rua das Palmeiras, 142 — Aurora do Vale, MG</p>
+    </div>
+
+    <main id="conteudo">
       <!-- SEÇÃO HERO -->
-      <section class="hero-section" id="hero">
+      <section class="hero" id="hero">
         <div class="hero-conteudo container">
-          <span class="span-hero">estúdio de tatuagem - aurora do vale, mg</span>
-          <h1 class="titulo">sua ideia na <span>agulha</span> sua essência na <span>pele</span>.</h1>
-          <p class="texto-hero">Projetos autorais desenhados com propósito, feitos sob medida para quem busca a tatuagem como identidade, não como enfeite.</p>
+          <span class="eyebrow">Estúdio de tatuagem · Aurora do Vale, MG</span>
+          <h1 class="hero-titulo">Sua ideia na <em>agulha</em>, sua essência na <em>pele</em>.</h1>
+          <p class="hero-texto">Projetos autorais desenhados com propósito, feitos sob medida para quem busca a tatuagem como identidade, não como enfeite.</p>
+          <div class="hero-acoes">
+            <a class="btn btn-claro" href="#orcamento">
+              Solicitar orçamento
+              <span class="btn-icone" aria-hidden="true">↗</span>
+            </a>
+            <a class="link-seta" href="#portfolio">Ver trabalhos</a>
+          </div>
+        </div>
+
+        <div class="hero-faixa container">
+          <dl class="numeros">
+            <div>
+              <dt>sessões realizadas</dt>
+              <dd>+1.200</dd>
+            </div>
+            <div>
+              <dt>anos de estúdio</dt>
+              <dd>12</dd>
+            </div>
+            <div>
+              <dt>avaliação no Google</dt>
+              <dd>4,9</dd>
+            </div>
+          </dl>
         </div>
       </section>
-      <!-- SEÇÃO SOBRE -->
-      <section class="sobre-section" id="sobre">
+
+      <!-- SEÇÃO SOBRE (CLARA) -->
+      <section class="sobre secao-clara" id="sobre">
         <div class="sobre-grid container">
-          <div class="sobre-esquerdo">
-            <span>sobre</span>
-            <h2 class="nome-sobre">estúdio tatuagem</h2>
+          <div class="sobre-esquerdo revelar">
+            <span class="eyebrow">Sobre o estúdio</span>
+            <h2 class="sobre-frase">Cada peça é construída como um estudo de luz e sombra antes de tocar a pele.</h2>
           </div>
 
-          <div class="sobre-direito">
-            <h3 class="titulo-sobre">Cada peça é construída como um estudo de luz e sombra antes de tocar a pele.</h3>
+          <div class="sobre-direito revelar">
             <p>
-              Especialista em Black & Grey Realism, trabalhamos exclusivamente com projetos grandes e personalizados, onde profundidade, contraste e nível de detalhe conduzem cada decisão. não
-              trabalhamos com old school, aquarela, cartoon ou tatuagens coloridas — o compromisso é inteiro com a técnica do preto e cinza
+              Trabalhamos com projetos grandes e personalizados, onde profundidade, contraste e nível de detalhe conduzem cada decisão. Do realismo em preto e cinza ao oriental colorido, o desenho nasce junto com você e é pensado para o seu corpo.
             </p>
-            <p>Atendimento por consulta, com projeto desenvolvido junto ao cliente antes da primeira sessão.</p>
+            <p>Atendimento por consulta, com o projeto aprovado antes da primeira sessão.</p>
+
+            <ul class="estilos" aria-label="Estilos atendidos">
+              <li><span>Oriental</span><em>Hannya, ondas, carpas e dragões</em></li>
+              <li><span>Realismo preto e cinza</span><em>Retratos, animais e esculturas</em></li>
+              <li><span>Colorido</span><em>Cor sólida com contraste alto</em></li>
+              <li><span>Anime e geek</span><em>Personagens e símbolos</em></li>
+              <li><span>Neotribal</span><em>Formas orgânicas e fluidas</em></li>
+            </ul>
           </div>
         </div>
       </section>
+
       <!-- SEÇÃO DESTAQUE -->
-      <section class="destaque-section">
+      <section class="destaque">
         <div class="destaque-grid container">
-          <!-- LADO ESQUERDO -->
-          <div class="destaque-esquerdo">
-            <span>destaque do mês</span>
-            <figure>
-              <img class="img-destaque" src="imagens/img-destaque.jpg" alt="Tatuagem realista de leão em preto e cinza no antebraço" />
-              <figcaption class="legenda-img"><a href="https://unsplash.com/pt-br/fotografias/fotografia-de-foco-raso-da-tatuagem-do-antebraco-do-leao-sDXjyJqT_Yo" target="_blank" rel="noopener">Foto: Najib Kalil / Unsplash</a></figcaption>
-            </figure>
-          </div>
-          <!-- LADO DIREITO -->
-          <div class="destaque-direito">
-            <span class="tag-destaque">peça em destaque</span>
-            <h2 class="titulo-destaque">Leão Realista - Antebraço</h2>
-            <p class="texto-destaque">
+          <figure class="moldura revelar">
+            <div class="moldura-nucleo">
+              <img src="imagens/img-destaque.jpg" alt="Tatuagem realista de leão em preto e cinza no antebraço" width="700" height="1050" loading="lazy" />
+              <figcaption><a href="https://unsplash.com/pt-br/fotografias/fotografia-de-foco-raso-da-tatuagem-do-antebraco-do-leao-sDXjyJqT_Yo" target="_blank" rel="noopener">Foto: Najib Kalil / Unsplash</a></figcaption>
+            </div>
+          </figure>
+
+          <div class="destaque-texto revelar">
+            <span class="eyebrow">Destaque do mês</span>
+            <h2 class="titulo-secao">Leão realista, <em>antebraço</em></h2>
+            <p>
               Retrato de leão em realismo preto e cinza, com juba construída em camadas de sombreamento suave e olhar marcante como ponto focal. Um trabalho de muito contraste e textura, pensado para acompanhar o formato do antebraço.
             </p>
 
-            <div class="info-destaque">
-              <div class="info-item">
-                <span class="info-label">duração</span>
-                <span class="info-valor">6 horas</span>
+            <dl class="ficha">
+              <div>
+                <dt>duração</dt>
+                <dd>6 horas</dd>
               </div>
-              <div class="info-item">
-                <span class="info-label">sessões</span>
-                <span class="info-valor">1</span>
+              <div>
+                <dt>sessões</dt>
+                <dd>1</dd>
               </div>
-              <div class="info-item">
-                <span class="info-label">região</span>
-                <span class="info-valor">antebraço</span>
+              <div>
+                <dt>região</dt>
+                <dd>Antebraço</dd>
               </div>
-            </div>
+            </dl>
           </div>
         </div>
       </section>
+
       <!-- SEÇÃO PORTFÓLIO -->
-      <section class="portfolio-section" id="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
-          <div class="portfolio-header">
-            <span>portfólio</span>
-            <h2 class="titulo-portfolio">trabalhos selecionados</h2>
+          <div class="portfolio-topo revelar">
+            <div>
+              <span class="eyebrow">Portfólio</span>
+              <h2 class="titulo-secao">Trabalhos <em>selecionados</em></h2>
+            </div>
+            <p>Clique em uma peça para ver em tamanho maior.</p>
           </div>
 
-          <div class="portfolio-grid">
-            <!-- IMAGEM 1 -->
-            <figure class="portfolio-item">
-              <img src="imagens-portfolio/portfolio-1.jpg" alt="Tatuagem na panturrilha no estilo oriental Black and Grey, máscara Hannya com ondas e flor de cerejeira." />
-              <figcaption class="legenda-portfolio">Panturrilha - Oriental</figcaption>
+          <div class="bento">
+            <figure class="bento-item revelar">
+              <button type="button" class="bento-botao" data-legenda="Panturrilha — Oriental">
+                <img src="imagens-portfolio/portfolio-1.jpg" alt="Tatuagem na panturrilha no estilo oriental Black and Grey, máscara Hannya com ondas e flor de cerejeira." loading="lazy" />
+              </button>
+              <figcaption>Panturrilha <span>Oriental</span></figcaption>
             </figure>
-            <!-- IMAGEM 2 -->
-            <figure class="portfolio-item">
-              <img src="imagens-portfolio/portfolio-2.jpg" alt="Tatuagem no ombro no estilo anime, selo amaldiçoado de Naruto com marcas em formato de chamas." />
-              <figcaption class="legenda-portfolio">Ombro - Anime</figcaption>
+            <figure class="bento-item revelar">
+              <button type="button" class="bento-botao" data-legenda="Ombro — Anime">
+                <img src="imagens-portfolio/portfolio-2.jpg" alt="Tatuagem no ombro no estilo anime, selo amaldiçoado de Naruto com marcas em formato de chamas." loading="lazy" />
+              </button>
+              <figcaption>Ombro <span>Anime</span></figcaption>
             </figure>
-            <!-- IMAGEM 3 -->
-            <figure class="portfolio-item">
-              <img src="imagens-portfolio/portfolio-3.jpg" alt="Tatuagem no braço no estilo oriental colorido, máscara Hannya com folhas vermelhas." />
-              <figcaption class="legenda-portfolio">Braço - Oriental colorido</figcaption>
+            <figure class="bento-item revelar">
+              <button type="button" class="bento-botao" data-legenda="Braço — Oriental colorido">
+                <img src="imagens-portfolio/portfolio-3.jpg" alt="Tatuagem no braço no estilo oriental colorido, máscara Hannya com folhas vermelhas." loading="lazy" />
+              </button>
+              <figcaption>Braço <span>Oriental colorido</span></figcaption>
             </figure>
-            <!-- IMAGEM 4 -->
-            <figure class="portfolio-item">
-              <img src="imagens-portfolio/portfolio-4.jpg" alt="Tatuagem no antebraço e mão no estilo neotribal, formas pontiagudas com textos manuscritos ao redor." />
-              <figcaption class="legenda-portfolio">Antebraço - Neotribal</figcaption>
+            <figure class="bento-item revelar">
+              <button type="button" class="bento-botao" data-legenda="Antebraço — Neotribal">
+                <img src="imagens-portfolio/portfolio-4.jpg" alt="Tatuagem no antebraço e mão no estilo neotribal, formas pontiagudas com textos manuscritos ao redor." loading="lazy" />
+              </button>
+              <figcaption>Antebraço <span>Neotribal</span></figcaption>
             </figure>
-            <!-- IMAGEM 5 -->
-            <figure class="portfolio-item">
-              <img src="imagens-portfolio/portfolio-5.webp" alt="Tatuagem no pescoço no estilo Black and Grey, máscaras da comédia e da tragédia com uma rosa." />
-              <figcaption class="legenda-portfolio">Pescoço - Black and Grey</figcaption>
+            <figure class="bento-item revelar">
+              <button type="button" class="bento-botao" data-legenda="Pescoço — Black and Grey">
+                <img src="imagens-portfolio/portfolio-5.webp" alt="Tatuagem no pescoço no estilo Black and Grey, máscaras da comédia e da tragédia com uma rosa." loading="lazy" />
+              </button>
+              <figcaption>Pescoço <span>Black and Grey</span></figcaption>
             </figure>
-            <!-- IMAGEM 6 -->
-            <figure class="portfolio-item">
-              <img src="imagens-portfolio/portfolio-6.webp" alt="Antebraço fechado no estilo realismo oriental, máscara Hannya com kanji, pagode e flor de lótus." />
-              <figcaption class="legenda-portfolio">Antebraço - Realismo oriental</figcaption>
+            <figure class="bento-item revelar">
+              <button type="button" class="bento-botao" data-legenda="Antebraço — Realismo oriental">
+                <img src="imagens-portfolio/portfolio-6.webp" alt="Antebraço fechado no estilo realismo oriental, máscara Hannya com kanji, pagode e flor de lótus." loading="lazy" />
+              </button>
+              <figcaption>Antebraço <span>Realismo oriental</span></figcaption>
             </figure>
           </div>
         </div>
       </section>
-      <!-- SEÇÃO PROCESSO -->
-      <section class="processo-section">
-        <div class="processo-grid container">
-          <div class="side-esquerdo">
-            <span class="tag-processo">como funciona</span>
-            <h2 class="titulo-processo">do esboço à pele</h2>
+
+      <!-- LIGHTBOX DO PORTFÓLIO -->
+      <dialog class="lightbox" aria-label="Visualizar trabalho">
+        <button type="button" class="lightbox-fechar" aria-label="Fechar">×</button>
+        <button type="button" class="lightbox-nav lightbox-anterior" aria-label="Trabalho anterior">←</button>
+        <figure>
+          <img src="" alt="" />
+          <figcaption></figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-proximo" aria-label="Próximo trabalho">→</button>
+      </dialog>
+
+      <!-- SEÇÃO PROCESSO (CLARA) -->
+      <section class="processo secao-clara" id="processo">
+        <div class="container">
+          <div class="processo-topo revelar">
+            <span class="eyebrow">Como funciona</span>
+            <h2 class="titulo-secao">Do esboço <em>à pele</em></h2>
           </div>
 
-          <ol class="side-direito">
-            <!-- PROCESSO 1 -->
-            <li class="item-processo">
-              <span class="num-item">01</span>
-              <div class="texto-processo">
-                <h3>consulta</h3>
-                <p>Conversa sobre a ideia, referências e exepectativas antes de qualquer traço.</p>
-              </div>
+          <ol class="passos">
+            <li class="revelar">
+              <span class="passo-num">01</span>
+              <h3>Consulta</h3>
+              <p>Conversa sobre a ideia, as referências e as expectativas antes de qualquer traço.</p>
             </li>
-            <!-- PROCESSO 2 -->
-            <li class="item-processo">
-              <span class="num-item">02</span>
-              <div class="texto-processo">
-                <h3>esboço</h3>
-                <p>Desenho autoral desenvolvido e aprovado com você antes da sessão.</p>
-              </div>
+            <li class="revelar">
+              <span class="passo-num">02</span>
+              <h3>Esboço</h3>
+              <p>Desenho autoral desenvolvido e aprovado com você antes da sessão.</p>
             </li>
-            <!-- PROCESSO 3 -->
-            <li class="item-processo">
-              <span class="num-item">03</span>
-              <div class="texto-processo">
-                <h3>sessão</h3>
-                <p>Execução com o tempo necessário, respeitando o ritmo de cada projeto.</p>
-              </div>
+            <li class="revelar">
+              <span class="passo-num">03</span>
+              <h3>Sessão</h3>
+              <p>Execução com o tempo necessário, respeitando o ritmo de cada projeto.</p>
             </li>
-            <!-- PROCESSO 4 -->
-            <li class="item-processo">
-              <span class="num-item">04</span>
-              <div class="texto-processo">
-                <h3>acabamento</h3>
-                <p>Orientações completas de cuidado pós-tatuagem para a melhor cicatrização.</p>
-              </div>
+            <li class="revelar">
+              <span class="passo-num">04</span>
+              <h3>Cicatrização</h3>
+              <p>Orientações completas de cuidado para a peça cicatrizar bem e durar.</p>
             </li>
           </ol>
         </div>
       </section>
-      <!-- SEÇÃO DUVIDAS -->
-      <section class="duvidas-section" id="duvidas">
+
+      <!-- SEÇÃO DÚVIDAS -->
+      <section class="duvidas" id="duvidas">
         <div class="duvidas-grid container">
-          <div class="div-texto">
-            <span class="tag-duvidas">dúvidas frequentes</span>
-            <h2 class="titulo-duvidas">Antes de agendar</h2>
+          <div class="duvidas-topo revelar">
+            <span class="eyebrow">Dúvidas frequentes</span>
+            <h2 class="titulo-secao">Antes de <em>agendar</em></h2>
+            <p>Não achou sua resposta? <a class="link-seta" href="https://wa.me/5538999999999" target="_blank" rel="noopener">Fale no WhatsApp</a></p>
           </div>
 
-          <div class="faq-lista">
-            <!-- DUVIDA 1 -->
+          <div class="faq revelar">
             <details class="faq-item">
-              <summary class="duvida">Vocês fazem tatuagens coloridas?</summary>
-              <p class="resposta">Não. O estúdio trabalha exclusivamente com Black & Gray Realism preto e cinza, sem exceções de estilo.</p>
+              <summary>Vocês fazem tatuagens coloridas?</summary>
+              <div class="faq-resposta"><p>Sim. Fazemos preto e cinza e também cor, principalmente no oriental. Na consulta definimos juntos o que funciona melhor para a sua ideia e o seu tom de pele.</p></div>
             </details>
-            <!-- DUVIDA 2 -->
             <details class="faq-item">
-              <summary class="duvida">Quanto tempo dura uma seção?</summary>
-              <p class="resposta">Sessões variam entre 4 e 6 horas. dependendo do tamanho e nível de detalhe do projeto. Peças maiores são divididas em múltiplas sessões.</p>
+              <summary>Quanto tempo dura uma sessão?</summary>
+              <div class="faq-resposta"><p>Entre 4 e 6 horas, dependendo do tamanho e do nível de detalhe. Peças grandes, como fechamentos, são divididas em várias sessões.</p></div>
             </details>
-            <!-- DUVIDA 3 -->
             <details class="faq-item">
-              <summary class="duvida">Como funciona o orçamento?</summary>
-              <p class="resposta">Preencha o formulário de agendamento com o máximo de detalhes possível. O retorno é feito via WhatsApp com uma estimativa inicial de valor e prazo.</p>
+              <summary>Como funciona o orçamento?</summary>
+              <div class="faq-resposta"><p>Preencha o formulário com o máximo de detalhes. O retorno é feito pelo WhatsApp, com uma estimativa inicial de valor e prazo.</p></div>
             </details>
-            <!-- DUVIDA 4 -->
             <details class="faq-item">
-              <summary class="duvida">Preciso trazer referências prontas?</summary>
-              <p class="resposta">Não é obrigatório, mas ajuda muito. Referências visuais aceleram o desenvolvimento do projeto antes da primeira sessão.</p>
+              <summary>Preciso trazer referências prontas?</summary>
+              <div class="faq-resposta"><p>Não é obrigatório, mas ajuda muito. Referências visuais aceleram o desenvolvimento do projeto antes da primeira sessão.</p></div>
             </details>
-            <!-- DUVIDA 5 -->
             <details class="faq-item">
-              <summary class="duvida">Fazem tatuagens pequenas?</summary>
-              <p class="resposta">O foco do estúdio é em projetos grandes e personalizados. Peças pequenas são avaliadas caso a caso.</p>
+              <summary>Vocês fazem tatuagens pequenas?</summary>
+              <div class="faq-resposta"><p>O foco do estúdio são projetos grandes e personalizados. Peças pequenas são avaliadas caso a caso.</p></div>
             </details>
           </div>
         </div>
       </section>
+
       <!-- SEÇÃO AGENDAMENTO -->
-      <section class="ag-section" id="orcamento">
-        <div class="ag-grid container">
-          <div class="ag-header">
-            <span class="tag-ag">agendamento</span>
-            <h2>Vamos projetar sua peça</h2>
-            <p>Preencha o formulário com o máximo de detalhes. O retorno é feito por WhatsApp com uma estimativa inicial.</p>
+      <section class="agendamento" id="orcamento">
+        <div class="container">
+          <div class="ag-topo revelar">
+            <span class="eyebrow">Agendamento</span>
+            <h2 class="titulo-secao">Vamos projetar <em>sua peça</em></h2>
+            <p>Preencha com o máximo de detalhes. Ao enviar, o pedido abre no WhatsApp já com tudo escrito.</p>
           </div>
 
-          <form class="ag-form">
-            <!-- NOME/WHATSAPP -->
-            <div class="ag-row">
-              <!-- CAMPO DO NOME -->
+          <div class="moldura moldura-form revelar">
+            <form class="ag-form moldura-nucleo" novalidate>
               <div class="ag-linha">
-                <label for="ag-nome">nome completo</label>
-                <input required id="ag-nome" type="text" placeholder="Seu nome" />
+                <div class="campo">
+                  <label for="ag-nome">Nome completo</label>
+                  <input required id="ag-nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" />
+                  <span class="erro" aria-live="polite"></span>
+                </div>
+                <div class="campo">
+                  <label for="ag-num">WhatsApp</label>
+                  <input required id="ag-num" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(38) 9 9999-9999" pattern="[0-9 \(\)\+\-]{10,}" />
+                  <span class="erro" aria-live="polite"></span>
+                </div>
               </div>
-              <!-- CAMPO DO WHATSAPP -->
+
               <div class="ag-linha">
-                <label for="ag-num">whatsapp</label>
-                <input required id="ag-num" type="tel" placeholder="(38) 9 9999-9999" />
+                <div class="campo">
+                  <label for="ag-local">Local do corpo</label>
+                  <input required id="ag-local" name="local" type="text" placeholder="Ex.: antebraço, costas, coxa" />
+                  <span class="erro" aria-live="polite"></span>
+                </div>
+                <div class="campo">
+                  <label for="ag-tamanho">Tamanho aproximado</label>
+                  <input required id="ag-tamanho" name="tamanho" type="text" placeholder="Ex.: 20 x 30 cm" />
+                  <span class="erro" aria-live="polite"></span>
+                </div>
               </div>
-            </div>
-            <!-- LOCAL/TAMANHO -->
-            <div class="ag-row">
-              <!-- CAMPO LOCAL -->
-              <div class="ag-linha">
-                <label for="ag-local">local do corpo</label>
-                <input required id="ag-local" type="text" placeholder="Ex: antebraço, costas, coxa" />
+
+              <div class="campo">
+                <label for="ag-estilo">Estilo desejado</label>
+                <select required id="ag-estilo" name="estilo">
+                  <option value="">Selecionar...</option>
+                  <option>Oriental</option>
+                  <option>Realismo preto e cinza</option>
+                  <option>Colorido</option>
+                  <option>Anime e geek</option>
+                  <option>Neotribal</option>
+                  <option>Outro / não sei definir</option>
+                </select>
+                <span class="erro" aria-live="polite"></span>
               </div>
-              <!-- CAMPO TAMANHO -->
-              <div class="ag-linha">
-                <label for="ag-tamanho">tamanho aproximado</label>
-                <input required id="ag-tamanho" type="text" placeholder="Ex: 20x30cm" />
+
+              <div class="campo">
+                <label for="ag-ideia">Descreva sua ideia</label>
+                <textarea required id="ag-ideia" name="ideia" rows="4" placeholder="Conte sobre a ideia, as referências e o que você imagina da peça."></textarea>
+                <span class="erro" aria-live="polite"></span>
               </div>
-            </div>
-            <!-- ESTILO -->
-            <div class="ag-campo">
-              <label for="ag-estilo">estilo desejado</label>
-              <select required id="ag-estilo">
-                <option value>Selecionar...</option>
-                <option>Retrato realista</option>
-                <option>Realismo animal</option>
-                <option>Composição simbólica</option>
-                <option>Outro/não sei definir</option>
-              </select>
-            </div>
-            <!-- IDEIA -->
-            <div class="ag-campo">
-              <label for="ag-ideia">descreve sua ideia</label>
-              <textarea required id="ag-ideia" placeholder="Conte um pouco sobre a ideia, referências e oque você imagina da peça."></textarea>
-            </div>
-            <!-- CIDADE -->
-            <div class="ag-campo">
-              <label for="ag-cidade">cidade (opcional)</label>
-              <input required id="ag-cidade" type="text" placeholder="Ex: Aurora do Vale-MG" />
-            </div>
-            <!-- IMAGEM REFERENCIA -->
-            <label class="anexo" for="ag-imagem">
-              <input required id="ag-imagem" type="file" />
-              <span class="span-file">📎Anexar imagens de referência</span>
-              <span class="span-file2">opcional - PNG ou JPG</span>
-            </label>
-            <!-- BUTÕES -->
-            <div class="buttons">
-              <button class="btn-primary">solicitar orçamento</button>
-              <a class="btn-second" href="https://wa.me/5538999999999">iniciar pelo whatsapp</a>
-            </div>
-          </form>
+
+              <div class="campo">
+                <label for="ag-cidade">Cidade <span class="opcional">(opcional)</span></label>
+                <input id="ag-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Ex.: Aurora do Vale, MG" />
+              </div>
+
+              <div class="anexo">
+                <input id="ag-imagem" name="referencias" type="file" accept="image/png, image/jpeg" multiple />
+                <label for="ag-imagem">
+                  <span class="anexo-titulo">Anexar imagens de referência</span>
+                  <span class="anexo-info">Opcional · PNG ou JPG · você envia as imagens na conversa</span>
+                </label>
+              </div>
+
+              <div class="ag-botoes">
+                <button class="btn btn-claro" type="submit">
+                  Solicitar orçamento
+                  <span class="btn-icone" aria-hidden="true">↗</span>
+                </button>
+                <a class="link-seta" href="https://wa.me/5538999999999" target="_blank" rel="noopener">Prefiro começar pelo WhatsApp</a>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
-      <!-- SEÇÃO RODAPÉ -->
-      <footer>
-        <div class="container">
-
-          <div class="footer-grid">
-            <div class="item-footer">
-              <span>estúdio<em>Tatuagem</em></span>
-            </div>
-            <div class="item-footer">
-              <h4 class="text-lista">navegação</h4>
-              <ul class="lista-footer">
-                <li><a href="#sobre">sobre</a></li>
-                <li><a href="#portfolio">portfólio</a></li>
-                <li><a href="#duvidas">dúvidas</a></li>
-                <li><a href="#orcamento">agendamento</a></li>
-              </ul>
-            </div>
-            <div class="item-footer">
-              <h4 class="text-lista">contato</h4>
-              <ul class="lista-footer">
-                <li><a href="#">Rua das Palmeiras, 142 — Aurora do Vale, MG</a></li>
-                <li><a href="https://wa.me/5538999999999" target="_blank">(38) 9 9999-9999</a></li>
-                <li><a href="#" target="_blank">estudiotatuagem</a></li>
-              </ul>
-            </div>
-            
-          </div> 
-        
-          <div class="footer-bottom">
-            <p>© 2026 Estúdio Tatuagem — Todos os direitos reservados</p>
-            <p>Black & Grey Realism · Aurora do Vale-MG</p>
-          </div>
-
-        </div>  
-      </footer>
     </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+      <div class="container">
+        <div class="rodape-grid">
+          <div>
+            <h4 class="rodape-titulo">Navegação</h4>
+            <ul>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#processo">Processo</a></li>
+              <li><a href="#orcamento">Agendamento</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="rodape-titulo">Contato</h4>
+            <ul>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=Rua+das+Palmeiras+142" target="_blank" rel="noopener">Rua das Palmeiras, 142 — Aurora do Vale, MG</a></li>
+              <li><a href="https://wa.me/5538999999999" target="_blank" rel="noopener">(38) 9 9999-9999</a></li>
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">@estudiotatuagem.av</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="rodape-titulo">Horário</h4>
+            <ul>
+              <li>Terça a sábado</li>
+              <li>9h às 19h, com hora marcada</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="marca" aria-hidden="true">Estúdio <em>Tatuagem</em></p>
+
+        <div class="rodape-base">
+          <p>© 2026 Estúdio Tatuagem</p>
+          <p>Projeto de estudo, sem fins comerciais. Estúdio, endereço e contatos são fictícios.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
