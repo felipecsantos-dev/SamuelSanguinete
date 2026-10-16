@@ -1,19 +1,30 @@
+// ─── BARRA DE NAVEGAÇÃO: FUNDO SÓLIDO DEPOIS DO TOPO DO HERO ───
+const cabecalho = document.querySelector('.cabecalho');
+const sentinela = document.createElement('div');
+sentinela.style.cssText = 'position:absolute;top:0;height:40px;width:1px;';
+document.body.prepend(sentinela);
+
+new IntersectionObserver(([entrada]) => {
+  cabecalho.classList.toggle('rolado', !entrada.isIntersecting);
+}).observe(sentinela);
+
 // ─── MENU MOBILE ───
-const hamburguer = document.querySelector('.hamburguer');
+const hamburguer = document.querySelector('.btn-menu');
+const textoMenu = hamburguer.querySelector('.btn-menu-texto');
 const menuMobile = document.querySelector('#menu-mobile');
 
 function abrirMenu() {
   menuMobile.hidden = false;
   requestAnimationFrame(() => menuMobile.classList.add('aberto'));
   hamburguer.setAttribute('aria-expanded', 'true');
-  hamburguer.setAttribute('aria-label', 'Fechar menu');
+  textoMenu.textContent = 'Fechar';
   document.body.style.overflow = 'hidden';
 }
 
 function fecharMenu() {
   menuMobile.classList.remove('aberto');
   hamburguer.setAttribute('aria-expanded', 'false');
-  hamburguer.setAttribute('aria-label', 'Abrir menu');
+  textoMenu.textContent = 'Menu';
   document.body.style.overflow = '';
   setTimeout(() => {
     if (!menuMobile.classList.contains('aberto')) menuMobile.hidden = true;
@@ -33,7 +44,9 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ─── ENTRADA AO ROLAR ───
+// ─── ENTRADAS AO ROLAR ───
+// Mesmo comportamento do portfólio: entra uma vez quando 20% do elemento aparece.
+// A direção vem de data-revelar (baixo, esquerda, direita) e o atraso de data-atraso.
 const observadorRevelar = new IntersectionObserver(
   (entradas) => {
     entradas.forEach((entrada) => {
@@ -43,10 +56,20 @@ const observadorRevelar = new IntersectionObserver(
       }
     });
   },
-  { rootMargin: '0px 0px -10% 0px' }
+  { threshold: 0.2 }
 );
 
-document.querySelectorAll('.revelar').forEach((el) => observadorRevelar.observe(el));
+document.querySelectorAll('.revelar').forEach((el) => {
+  if (el.dataset.atraso) el.style.transitionDelay = `${el.dataset.atraso}s`;
+  observadorRevelar.observe(el);
+});
+
+// No desktop as tatuagens sobem em cascata, coluna por coluna (no celular é uma por linha)
+if (window.matchMedia('(min-width: 769px)').matches) {
+  document.querySelectorAll('.bento-item').forEach((item, indice) => {
+    item.style.transitionDelay = `${(indice % 3) * 0.12}s`;
+  });
+}
 
 // ─── LINK ATIVO NA NAVEGAÇÃO ───
 const linksNav = document.querySelectorAll('.lista-nav a');
